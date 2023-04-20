@@ -11,7 +11,7 @@ export function HitCounter({ baseUrl, siteId, apiKey }: Credentials) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    fetch(`${baseUrl}/api/v1/hits/${siteId}`, {
+    fetch(`${baseUrl}/api/v1/breakdown/${siteId}`, {
       headers: {
         Authorization: `Bearer ${apiKey}`,
       },
