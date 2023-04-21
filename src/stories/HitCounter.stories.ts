@@ -1,17 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
-
 import { HitCounter } from "./HitCounter";
 
-export default {
-  title: "Components/HitCounter",
+const meta: Meta<typeof HitCounter> = {
+  title: "HitCounter",
   component: HitCounter,
-  args: {
-    baseUrl: "string",
-    siteId: "string",
-    apiKey: "string",
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
   },
-} as Meta<typeof HitCounter>;
+};
 
-export const Story = Template.bind({});
-Story.args = {};
+export default meta;
+type Story = StoryObj<typeof HitCounter>;
