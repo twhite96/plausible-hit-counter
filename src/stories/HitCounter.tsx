@@ -11,7 +11,8 @@ type Credentials = {
 // How do I do that?
 // I can't use import.meta.env.VITE_... here
 // do I use a helper function?
-
+// Nope! we're already exporting the necessary params
+// to be imported in the lib
 export function HitCounter({ BASEURL, SITEID, APIKEY }: Credentials) {
   const BASEURL = import.meta.env.VITE_BASE_URL;
   const SITEID = import.meta.env.VITE_SITE_ID;
